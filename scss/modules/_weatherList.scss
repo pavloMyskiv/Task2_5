@@ -1,0 +1,60 @@
+/** @format */
+
+.wather_nextdays {
+  height: 400px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 5px;
+  outline: 3px dashed $old_black;
+  outline-offset: 3px;
+  border-radius: 5px;
+  scrollbar-width: auto;
+  scrollbar-color: $backgroind_color_lite $backgroind_color_hard;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: $backgroind_color_lite;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $backgroind_color_hard;
+    border-radius: 50px;
+    border: 2px solid $old_black;
+  }
+  .wather_nextdays_day {
+    margin-top: 15px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2rem;
+    border-bottom: $border_solid;
+    &:last-child {
+      border: none;
+    }
+    .day_name {
+      width: 15%;
+      padding: 10px;
+      font-weight: 600;
+      border-right: $border_dashed;
+    }
+    .day_wather_img {
+      padding: 5px;
+      width: 20%;
+      height: 80px;
+      @include shadow_img;
+      img {
+        width: 100%;
+      }
+    }
+    .day_wather_status {
+      padding: 10px;
+      width: 30%;
+      border-right: $border_dashed;
+      border-left: $border_dashed;
+    }
+    .day_temperature {
+      width: 20%;
+    }
+  }
+}

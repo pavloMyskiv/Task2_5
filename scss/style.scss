@@ -1,0 +1,17 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import './modules/_variables';
+@import './modules/_mixins';
+@import './modules/_layout';
+@import './modules/_location';
+@import './modules/_currentWeather';
+@import './modules/_weatherList';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Old Stendart TT;
+  font-style: italic;
+}

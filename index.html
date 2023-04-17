@@ -1,0 +1,46 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wather widget</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="widget">
+        <div class="location">
+          <form action="">
+            <input
+              type="text"
+              class="location_search"
+              name="search_location"
+              placeholder="Enter location (Kiev, UA)"
+            />
+          </form>
+          <p class="location_selected">
+            Selected: <span id="location_selected"></span>
+          </p>
+        </div>
+        <div class="wather">
+          <div class="wather_current_day">
+            <div class="curent_day_temperature">
+              <p><span id="current_temperature"></span>°C</p>
+              <p>Feels like <span id="current_temperature_feels"></span>°C</p>
+            </div>
+            <div class="current_day_wather">
+              <p id="current_day_wather_status"></p>
+              <p id="current_day_wather_description"></p>
+            </div>
+            <dir id="current_day_img" class="current_day_img"></dir>
+          </div>
+          <div id="wather_nextdays" class="wather_nextdays"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
