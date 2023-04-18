@@ -1,4 +1,4 @@
-/** @format */
+
 import { getCityCoordinates, getCityWather } from './modules/fetchFunctions.js';
 import {
   mapCurrentWeather,
@@ -22,7 +22,7 @@ const APIData = {
 const form = document.querySelector('form');
 const input = document.querySelector('input');
 const locationSelected = document.querySelector('#location_selected');
-const weatherNextdays = document.getElementById('wather_nextdays');
+const weatherNextdays = document.getElementById('weather_nextdays');
 
 async function renderWidget() {
   let coordinates = await getCityCoordinates(APIData, input.value);

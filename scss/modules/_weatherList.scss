@@ -1,6 +1,5 @@
-/** @format */
 
-.wather_nextdays {
+.weather_nextdays {
   height: 400px;
   overflow-y: auto;
   margin-top: 10px;
@@ -21,7 +20,7 @@
     border-radius: 50px;
     border: 2px solid $old_black;
   }
-  .wather_nextdays_day {
+  .weather_nextdays_day {
     margin-top: 15px;
     padding-bottom: 10px;
     display: flex;
@@ -34,11 +33,12 @@
     }
     .day_name {
       width: 15%;
+      text-align: center;
       padding: 10px;
       font-weight: 600;
       border-right: $border_dashed;
     }
-    .day_wather_img {
+    .day_weather_img {
       padding: 5px;
       width: 20%;
       height: 80px;
@@ -47,14 +47,16 @@
         width: 100%;
       }
     }
-    .day_wather_status {
+    .day_weather_status {
       padding: 10px;
       width: 30%;
+      text-align: center;
       border-right: $border_dashed;
       border-left: $border_dashed;
     }
     .day_temperature {
       width: 20%;
+      text-align: center;
     }
   }
 }

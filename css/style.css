@@ -1,6 +1,4 @@
-/** @format */
 @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
-/** @format */ /** @format */ /** @format */
 .wrapper {
   width: 100vw;
   min-height: 100vh;
@@ -18,7 +16,6 @@
   background-color: #f8e4c4;
 }
 
-/** @format */
 .location {
   width: 100%;
   display: flex;
@@ -52,16 +49,17 @@
   color: #c8553d;
 }
 
-.wather_current_day {
+.weather_current_day {
   margin-top: 1rem;
   padding-bottom: 10px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-bottom: 4px solid #4a4a4a;
 }
-.wather_current_day .curent_day_temperature {
+.weather_current_day .curent_day_temperature {
+  width: 40%;
   display: flex;
   padding-right: 5px;
   flex-direction: column;
@@ -69,33 +67,38 @@
   align-items: center;
   border-right: 2px dashed #4a4a4a;
 }
-.wather_current_day .curent_day_temperature p:first-child {
+.weather_current_day .curent_day_temperature p:first-child {
+  text-align: center;
   font-size: 2rem;
   line-height: 1.5em;
   font-weight: 600;
 }
-.wather_current_day .curent_day_temperature p:last-child {
+.weather_current_day .curent_day_temperature p:last-child {
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.5em;
 }
-.wather_current_day .current_day_wather {
+.weather_current_day .current_day_weather {
   padding-right: 5px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-right: 2px dashed #4a4a4a;
 }
-.wather_current_day .current_day_wather p:first-child {
+.weather_current_day .current_day_weather p:first-child {
+  text-align: center;
   font-size: 2rem;
   line-height: 1.5em;
   font-weight: 600;
 }
-.wather_current_day .current_day_wather p:last-child {
+.weather_current_day .current_day_weather p:last-child {
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.5em;
 }
-.wather_current_day .current_day_img {
+.weather_current_day .current_day_img {
   padding: 5px;
   width: 25%;
   height: 100px;
@@ -106,12 +109,11 @@
   border-radius: 10px;
   border: 3px dashed #4a4a4a;
 }
-.wather_current_day .current_day_img img {
+.weather_current_day .current_day_img img {
   width: 100%;
 }
 
-/** @format */
-.wather_nextdays {
+.weather_nextdays {
   height: 400px;
   overflow-y: auto;
   margin-top: 10px;
@@ -122,18 +124,18 @@
   scrollbar-width: auto;
   scrollbar-color: #e6dbca #f5deb3;
 }
-.wather_nextdays::-webkit-scrollbar {
+.weather_nextdays::-webkit-scrollbar {
   width: 10px;
 }
-.wather_nextdays::-webkit-scrollbar-track {
+.weather_nextdays::-webkit-scrollbar-track {
   background: #e6dbca;
 }
-.wather_nextdays::-webkit-scrollbar-thumb {
+.weather_nextdays::-webkit-scrollbar-thumb {
   background-color: #f5deb3;
   border-radius: 50px;
   border: 2px solid #4a4a4a;
 }
-.wather_nextdays .wather_nextdays_day {
+.weather_nextdays .weather_nextdays_day {
   margin-top: 15px;
   padding-bottom: 10px;
   display: flex;
@@ -142,16 +144,17 @@
   font-size: 1.2rem;
   border-bottom: 4px solid #4a4a4a;
 }
-.wather_nextdays .wather_nextdays_day:last-child {
+.weather_nextdays .weather_nextdays_day:last-child {
   border: none;
 }
-.wather_nextdays .wather_nextdays_day .day_name {
+.weather_nextdays .weather_nextdays_day .day_name {
   width: 15%;
+  text-align: center;
   padding: 10px;
   font-weight: 600;
   border-right: 2px dashed #4a4a4a;
 }
-.wather_nextdays .wather_nextdays_day .day_wather_img {
+.weather_nextdays .weather_nextdays_day .day_weather_img {
   padding: 5px;
   width: 20%;
   height: 80px;
@@ -160,17 +163,19 @@
   border-radius: 10px;
   border: 3px dashed #4a4a4a;
 }
-.wather_nextdays .wather_nextdays_day .day_wather_img img {
+.weather_nextdays .weather_nextdays_day .day_weather_img img {
   width: 100%;
 }
-.wather_nextdays .wather_nextdays_day .day_wather_status {
+.weather_nextdays .weather_nextdays_day .day_weather_status {
   padding: 10px;
   width: 30%;
+  text-align: center;
   border-right: 2px dashed #4a4a4a;
   border-left: 2px dashed #4a4a4a;
 }
-.wather_nextdays .wather_nextdays_day .day_temperature {
+.weather_nextdays .weather_nextdays_day .day_temperature {
   width: 20%;
+  text-align: center;
 }
 
 * {

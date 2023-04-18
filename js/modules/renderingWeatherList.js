@@ -1,15 +1,14 @@
-/** @format */
 
 const getNextDayHTML = (dailyWeather, day) => {
-  const nextDayHTML = `<div class="wather_nextdays_day">
+  const nextDayHTML = `<div class="weather_nextdays_day">
         <div class="day_name">${day}</div>
-        <div class="day_wather_img">
+        <div class="day_weather_img">
           <img
             src="http://openweathermap.org/img/w/${dailyWeather.weather[0].icon}.png"
             alt="Weather icon"
           />
         </div>
-        <div class="day_wather_status">
+        <div class="day_weather_status">
           ${dailyWeather.weather[0].description}
         </div>
         <div class="day_temperature">
@@ -36,6 +35,7 @@ export const renderWeatherList = (weather, daysList, lenght) => {
   daysList.innerHTML = '';
   for (let i = 0; i < lenght; i++) {
     daysList.innerHTML =
-      daysList.innerHTML + getNextDayHTML(weather.daily[i], getDaysofWeek(lenght)[i]);
+      daysList.innerHTML +
+      getNextDayHTML(weather.daily[i], getDaysofWeek(lenght)[i]);
   }
 };
