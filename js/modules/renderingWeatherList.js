@@ -31,11 +31,11 @@ const getDaysofWeek = (lenght) => {
   return daysOfWeek;
 };
 export const renderWeatherList = (weather, daysList, lenght) => {
-  const dayList = getDaysofWeek(lenght);
-  daysList.innerHTML = '';
+  let resultHTML = '';
   for (let i = 0; i < lenght; i++) {
-    daysList.innerHTML =
-      daysList.innerHTML +
+    resultHTML =
+    resultHTML +
       getNextDayHTML(weather.daily[i], getDaysofWeek(lenght)[i]);
   }
+  daysList.innerHTML = resultHTML
 };

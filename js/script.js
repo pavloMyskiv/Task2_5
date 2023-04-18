@@ -1,3 +1,4 @@
+/** @format */
 
 import { getCityCoordinates, getCityWather } from './modules/fetchFunctions.js';
 import {
@@ -25,21 +26,22 @@ const locationSelected = document.querySelector('#location_selected');
 const weatherNextdays = document.getElementById('weather_nextdays');
 
 async function renderWidget() {
-  let coordinates = await getCityCoordinates(APIData, input.value);
+  let cityCoordinates = await getCityCoordinates(APIData, input.value);
 
-  if (coordinates.length == 0) {
+  if (cityCoordinates.length == 0) {
     setElementById('location_selected', 'Entered location is not valid');
     locationSelected.classList.add('error');
   } else {
     locationSelected.classList.remove('error');
+    const coordinates = cityCoordinates[0];
     setElementById(
       'location_selected',
-      `${coordinates[0].name}, ${coordinates[0].state}, ${coordinates[0].country}`
+      `${coordinates.name}, ${coordinates.state}, ${coordinates.country}`
     );
     let weather = await getCityWather(
       APIData,
-      coordinates[0].lon,
-      coordinates[0].lat
+      coordinates.lon,
+      coordinates.lat
     );
     mapCurrentWeather(weather);
     renderWeatherList(weather, weatherNextdays, daysListLenght);
