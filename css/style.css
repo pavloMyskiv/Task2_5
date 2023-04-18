@@ -23,6 +23,7 @@
   border-bottom: 4px solid #4a4a4a;
 }
 .location form {
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -36,6 +37,22 @@
   border-radius: 10px;
   border: 3px dashed #4a4a4a;
   background-color: #e6dbca;
+}
+.location form button {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  top: 50%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 3px dashed #4a4a4a;
+  background-color: #f8e4c4;
+  background-image: url(../img/cross.svg);
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .location p {
   margin-top: 0.5rem;

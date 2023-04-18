@@ -5,6 +5,7 @@
   flex-direction: column;
   border-bottom: $border_solid;
   form {
+    position: relative;
     display: flex;
     justify-content: space-between;
     input {
@@ -16,6 +17,21 @@
       font-family: inherit;
       @include default_border;
       background-color: $backgroind_color_lite;
+    }
+    button {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      top: 50%;
+      left: 94%;
+      transform: translate(-50%, -50%);
+      @include default_border;
+      background-color: $backgroind_color_main;
+      background-image: url(../img/cross.svg);
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
     }
   }
   p {
