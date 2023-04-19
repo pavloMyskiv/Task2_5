@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+/** @format */
 .wrapper {
   width: 100vw;
   min-height: 100vh;
@@ -16,6 +17,7 @@
   background-color: #f8e4c4;
 }
 
+/** @format */
 .location {
   width: 100%;
   display: flex;
@@ -38,21 +40,32 @@
   border: 3px dashed #4a4a4a;
   background-color: #e6dbca;
 }
-.location form button {
+.location form .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 4.5rem;
   position: absolute;
+  top: 50%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+}
+.location form .buttons button {
   width: 2rem;
   height: 2rem;
-  top: 50%;
-  left: 94%;
-  transform: translate(-50%, -50%);
   border-radius: 10px;
   border: 3px dashed #4a4a4a;
   background-color: #f8e4c4;
-  background-image: url(../img/cross.svg);
   background-position: 50% 50%;
-  background-size: contain;
+  background-size: 80%;
   background-repeat: no-repeat;
   cursor: pointer;
+}
+.location form .buttons button:first-child {
+  background-image: url(../img/cross.svg);
+}
+.location form .buttons button:last-child {
+  background-image: url(../img/search.svg);
 }
 .location p {
   margin-top: 0.5rem;

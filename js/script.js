@@ -47,7 +47,14 @@ async function renderWidget() {
     renderWeatherList(weather, weatherNextdays, daysListLenght);
   }
 }
+input.value = JSON.parse(localStorage.getItem('city'));
+
+if (input.value) {
+  renderWidget();
+}
+
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   renderWidget();
+  localStorage.setItem('city', JSON.stringify(input.value));
 });
