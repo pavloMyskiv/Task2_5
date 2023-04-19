@@ -18,6 +18,7 @@ const getNextDayHTML = (dailyWeather, day) => {
       </div>`;
   return nextDayHTML;
 };
+
 const getDaysofWeek = (lenght) => {
   const daysOfWeek = [];
   const today = new Date();
@@ -30,12 +31,12 @@ const getDaysofWeek = (lenght) => {
   }
   return daysOfWeek;
 };
+
 export const renderWeatherList = (weather, daysList, lenght) => {
   let resultHTML = '';
   for (let i = 0; i < lenght; i++) {
     resultHTML =
-    resultHTML +
-      getNextDayHTML(weather.daily[i], getDaysofWeek(lenght)[i]);
+      resultHTML + getNextDayHTML(weather.daily[i], getDaysofWeek(lenght)[i]);
   }
-  daysList.innerHTML = resultHTML
+  daysList.innerHTML = resultHTML;
 };
