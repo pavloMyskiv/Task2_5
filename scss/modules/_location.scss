@@ -1,3 +1,4 @@
+/** @format */
 
 .location {
   width: 100%;
@@ -18,20 +19,33 @@
       @include default_border;
       background-color: $backgroind_color_lite;
     }
-    button {
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 4.5rem;
       position: absolute;
-      width: 2rem;
-      height: 2rem;
       top: 50%;
-      left: 94%;
+      left: 88%;
       transform: translate(-50%, -50%);
-      @include default_border;
-      background-color: $backgroind_color_main;
-      background-image: url(../img/cross.svg);
-      background-position: 50% 50%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      cursor: pointer;
+
+      button {
+        width: 2rem;
+        height: 2rem;
+        @include default_border;
+        background-color: $backgroind_color_main;
+
+        background-position: 50% 50%;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &:first-child {
+          background-image: url(../img/cross.svg);
+        }
+        &:last-child{
+          background-image: url(../img/search.svg);
+        }
+      }
     }
   }
   p {
