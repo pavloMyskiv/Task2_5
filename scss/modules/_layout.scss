@@ -1,0 +1,18 @@
+/** @format */
+
+.wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $backgroind_color_lite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .widget {
+    margin: 5px;
+    padding: 10px;
+    width: 400px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px $old_black;
+    background-color: $backgroind_color_main;
+  }
+}

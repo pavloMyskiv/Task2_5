@@ -1,0 +1,62 @@
+/** @format */
+
+.location {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: $border_solid;
+  form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    input {
+      margin: 0;
+      padding: 5px;
+      width: 100%;
+      font-size: 1.2rem;
+      height: 3rem;
+      font-family: inherit;
+      @include default_border;
+      background-color: $backgroind_color_lite;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 4.5rem;
+      position: absolute;
+      top: 50%;
+      left: 88%;
+      transform: translate(-50%, -50%);
+
+      button {
+        width: 2rem;
+        height: 2rem;
+        @include default_border;
+        background-color: $backgroind_color_main;
+
+        background-position: 50% 50%;
+        background-size: 80%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        &:first-child {
+          background-image: url(../img/cross.svg);
+        }
+        &:last-child{
+          background-image: url(../img/search.svg);
+        }
+      }
+    }
+  }
+  p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    color: $old_black;
+    span {
+      font-weight: 600;
+    }
+    .error {
+      color: #c8553d;
+    }
+  }
+}
